@@ -6,7 +6,9 @@ const app = express(); //untuk memanggil expressjs
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-//memanggil 
+//memanggil routes
+let routes = require('./routes');
+routes(app);
 
 app.listen(3000, () => { //server port 3000
     console.log(`Server started on port`);
