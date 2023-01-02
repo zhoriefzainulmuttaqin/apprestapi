@@ -2,8 +2,8 @@
 
 exports.ok = function (values, res) { //ok akan dikirmkan ke controller
     let data = {
-        'status' :200,
-        'values' :values
+        'status':200,
+        'values':values
     };
 
     res.json(data);
