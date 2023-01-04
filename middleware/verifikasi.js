@@ -2,10 +2,10 @@ const jwt = require('jsonwebtoken'); //memanggil jwt
 const config = require('../config/secret'); //memanggil secret
 
 function verifikasi () { //mengecek verifikasi role
-    return function (req, res, next) {
-        let role = require.body.role; //role mengambil data dari body
+    return function (req, rest, next) {
+        let role = req.body.role; //role mengambil data dari body
         //cek authorization header
-        let tokenWithBearer = req.header.authorization;
+        let tokenWithBearer = req.headers.authorization;
         if (tokenWithBearer) {
             let token = tokenWithBearer.split(' ')[1];
             //verifikasi
