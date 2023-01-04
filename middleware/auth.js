@@ -91,8 +91,12 @@ exports.login = function (req, res) {
                 res.json({
                     "Error": true,
                     message: 'Email atau Password salah!'
-            });
+                });
             }
         }
     });
+}
+
+exports.secretpage = function (req, res) {
+    response.ok("Halaman ini hanya untuk Administrator (role:2)", res); //isi halaman admin/role 2
 }
